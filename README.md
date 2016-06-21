@@ -26,10 +26,21 @@ Debería decir 3.x.x, si es una version menor tenemos que cambiar los paths.
 alias firebase="'npm config get prefix'/bin/firebase"
 ```
 
+### Crear App en Firebase!
+
+Vamos a ir a la [consola de Firebase](https://console.firebase.google.com/?pli=1) y vamos a crear una nueva App, le ponemos un lindo nombre y la localización.
+
+### Conectarse a Firebase:
+```sh
+firebase login
+```
+
 ### Por ultimo iniciamos el cliente de Firebase:
 ```sh
 firebase init
 ```
+
+Y lo configuramos, como este repositorio ya tiene configurado Firebase le vamos a dar siguiente siguiente siguiente, hasta que tengamos que seleccionar la base de datos con la que vamos a trabajar. Despues nos vamos a encargar del resto.
 
 ### Por suerte para nosotros Firebase tiene un servidor web incorporado <3
 ```sh
