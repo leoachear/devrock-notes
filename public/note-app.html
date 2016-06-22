@@ -25,7 +25,6 @@
       </template>
     </div>
 
-
     <paper-fab
     icon="add"
     on-tap="create"
@@ -39,18 +38,18 @@
     on-close="commitChange">
     </na-editor>
 
-
     <firebase-document
     id="document"
     app-name="notes"
     path="[[editableNoteId]]"
     data="{{editableNote}}">
     </firebase-document>
+
     <firebase-query
     id="query"
     app-name="notes"
     path="/notes/[[user.uid]]"
-    data="{{notes}}" 
+    data="{{notes}}"
     isNew>
     </firebase-query>
 
