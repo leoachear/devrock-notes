@@ -13,17 +13,6 @@
     signed-in="[[signedIn]]"
     disabled="[[!online]]">
     </na-login>
-    <paper-fab
-    icon="add"
-    on-tap="create"
-    disabled="[[!online]]"
-    aria-label="Add note">
-    </paper-fab>
-    <na-editor
-    id="editor"
-    note="{{editableNote}}"
-    on-close="commitChange">
-    </na-editor>
 
     <div class="notes">
       <template is="dom-repeat" items="[[persistedNotes]]" as="note">
@@ -36,6 +25,21 @@
       </template>
     </div>
 
+
+    <paper-fab
+    icon="add"
+    on-tap="create"
+    disabled="[[!online]]"
+    aria-label="Add note">
+    </paper-fab>
+
+    <na-editor
+    id="editor"
+    note="{{editableNote}}"
+    on-close="commitChange">
+    </na-editor>
+
+
     <firebase-document
     id="document"
     app-name="notes"
@@ -46,14 +50,16 @@
     id="query"
     app-name="notes"
     path="/notes/[[user.uid]]"
-    data="{{notes}}">
+    data="{{notes}}" 
+    isNew>
     </firebase-query>
+
     <firebase-auth
     id="auth"
     app-name="notes"
     provider="google"
     signed-in="{{signedIn}}"
-    user="{{user}}">
+    user="{{user}}" >
     </firebase-auth>
 
     <app-indexeddb-mirror

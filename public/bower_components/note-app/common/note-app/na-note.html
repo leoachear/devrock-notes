@@ -6,8 +6,8 @@
       :host {
         display: block;
         box-sizing: border-box;
-        background-color: #fafafa;
-        color: #212121;
+        background-color: var(--paper-grey-800);
+        color: var(--paper-grey-50);
         padding: 1em;
         @apply(--paper-font-common-base);
         @apply(--shadow-elevation-2dp);
@@ -30,13 +30,13 @@
 
       p {
         margin: 0;
-        font-family: 'Roboto Slab', Times New Roman, serif;
+        font-family: 'Roboto', Arial, sans-serif;
         font-size: 0.9em;
         white-space: pre-wrap;
       }
 
       .placeholder:after {
-        content: 'Tap to edit';
+        content: 'Tap para editar';
         opacity: 0.5;
       }
 
